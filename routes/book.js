@@ -13,4 +13,59 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.get('/', async (req, res) => {
+    try {
+        const books = await Book.find({})
+        res.status(201).send(books)
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+
+router.get('/:id', async (req, res) => {
+    const _id = req.params.id
+    try {   
+        const book = await Book.findById(_id)
+        if (!book) {
+            res.status(404).send({error: 'There is no boook for this id'})
+        }
+        res.send(book)
+    } catch (error) {
+        res.status(500).send({error: 'Check the id of the book'})
+    }
+})
+
+router.patch('/:id', async (req, res) => {
+    const updates = Object.keys(req.body)
+    const allowedUpdates = ['name', 'author']
+    const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
+    
+    if (!isValidOperation) {
+        return res.status(400).send({error: 'Invalid updates!!'})
+    }
+
+    try {
+        const book = await Book.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true})
+        if (!book) {
+            return res.status(400).send({error: 'There is no boook for this id'})
+        }
+        res.send(book)
+    } catch (error) {
+        res.status(500).send({error: 'Check the id of the book'})
+    }
+    
+})
+
+router.delete('/:id', async (req, res) => {
+    try {
+        const book =  await Book.findByIdAndDelete(req.params.id)
+        if (!book) {
+            res.status(404).send({error: 'There is no boook for this id'})
+        }
+        res.send(book)
+    } catch (error) {
+        res.status(500).send({error: 'Check the id of the book'})
+    }
+}) 
+
 module.exports = router
