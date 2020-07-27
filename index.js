@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 
+const bookRoute = require('./routes/book')
+
 const dotenv = require('dotenv')
 dotenv.config()
 
@@ -13,5 +15,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 const db = mongoose.connection
 db.on('error', error => console.log(error))
 db.once('open', () => console.log('Connected to the Databse'))
+
+app.use('/', bookRoute)
 
 app.listen(process.env.PORT || 9001)
