@@ -1,8 +1,16 @@
 const express = require('express')
-const route = express.Router()
+const Book = require('../models/book')
 
-route.get('/', (req, res) => {
-    res.send('Its working!!!!!')
+const router = express.Router()
+
+router.post('/', async (req, res) => {
+    const book = new Book(req.body)
+    try {
+        await book.save()
+        res.status(201).send(book)
+    } catch (error) {
+        res.status(500).send(error)
+    }
 })
 
-module.exports = route
+module.exports = router
