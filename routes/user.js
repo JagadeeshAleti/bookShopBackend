@@ -55,7 +55,10 @@ router.patch('/:id', async (req, res) => {
         }
         res.send(user)
     } catch (error) {
-        res.status(500).send({error: 'Check the id of the user'})
+        const err = {
+            message: error.message,
+        }
+        res.status(500).send(err)
     }
     
 })
