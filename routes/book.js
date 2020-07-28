@@ -3,6 +3,7 @@ const Book = require('../models/book')
 
 const router = express.Router()
 
+//Creating a book
 router.post('/', async (req, res) => {
     const book = new Book(req.body)
     try {
@@ -13,6 +14,7 @@ router.post('/', async (req, res) => {
     }
 })
 
+//Get all the books
 router.get('/', async (req, res) => {
     try {
         const books = await Book.find({})
@@ -22,6 +24,7 @@ router.get('/', async (req, res) => {
     }
 })
 
+//Get a book by id
 router.get('/:id', async (req, res) => {
     const _id = req.params.id
     try {   
@@ -35,6 +38,7 @@ router.get('/:id', async (req, res) => {
     }
 })
 
+//Update a book by id
 router.patch('/:id', async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['name', 'author']
@@ -47,7 +51,7 @@ router.patch('/:id', async (req, res) => {
     try {
         const book = await Book.findByIdAndUpdate(req.params.id, req.body, {new: true, runValidators: true})
         if (!book) {
-            return res.status(400).send({error: 'There is no boook for this id'})
+            return res.status(404).send({error: 'There is no boook for this id'})
         }
         res.send(book)
     } catch (error) {
@@ -56,6 +60,7 @@ router.patch('/:id', async (req, res) => {
     
 })
 
+//Delete a book by id
 router.delete('/:id', async (req, res) => {
     try {
         const book =  await Book.findByIdAndDelete(req.params.id)

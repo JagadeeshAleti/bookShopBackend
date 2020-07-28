@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const bookRoute = require('./routes/book')
+const userRoute = require('./routes/user')
 const dotenv = require('dotenv')
 
 const app = express()
@@ -24,5 +25,6 @@ db.on('error', error => console.log(error))
 db.once('open', () => console.log('Connected to the Databse'))
 
 app.use('/book', bookRoute)
+app.use('/user', userRoute)
 
 app.listen(process.env.PORT || 9001)
