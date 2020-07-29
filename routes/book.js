@@ -41,7 +41,7 @@ router.get('/:id', async (req, res) => {
 //Update a book by id
 router.patch('/:id', async (req, res) => {
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['name', 'author']
+    const allowedUpdates = ['name', 'author', 'status', 'updatedBy']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
     
     if (!isValidOperation) {
@@ -72,5 +72,35 @@ router.delete('/:id', async (req, res) => {
         res.status(500).send({error: 'Check the id of the book'})
     }
 }) 
+
+//Checkout a book
+router.patch('/:bookId/checkout/:userId', async (req, res) => {
+    const params = req.params
+    const bookdId = params.bookId
+    const userId = params.userId
+    
+    try {
+        const book = await Book.findById(bookdId)
+        if (!book) {
+            res.status(404).send({message: "There is no book for this id"})
+            return
+        }
+        if (book.status !== "AVAILABLE") {
+            const err = {
+                message: "Book is unavialble"
+            }
+            res.status(400).send(err) 
+            return
+        } 
+        book.status = "CHECKOUT"
+        book.updatedBy = userId
+        await book.save()
+        res.send(book)
+    
+    } catch (error) {
+        res.status(500).send(error)
+    }
+    
+})
 
 module.exports = router
