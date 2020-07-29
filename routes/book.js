@@ -92,7 +92,7 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
             res.status(400).send(err) 
             return
         } 
-        book.status = "CHECKOUT"
+        book.status = "UNAVAILABLE"
         book.updatedBy = userId
         await book.save()
         res.send(book)
@@ -101,6 +101,27 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
         res.status(500).send(error)
     }
     
+})
+
+router.patch('/:bookId/return/:userId', async (req, res) => {
+    const params = req.params
+    const bookId = params.bookId
+    const userId = params.userId
+    try {
+        const book = await Book.findById(bookId)
+        if (!book) {
+            res.status(404).send({message: "There is no book for this id"})
+            return
+        }
+        if (book.status === "UNAVAILABLE") {
+            book.status = "AVAILABLE"
+            book.updatedBy = userId
+            await book.save()
+            res.send(book)
+        }
+    } catch (error) {
+        res.status(500).send(error)
+    }
 })
 
 module.exports = router
