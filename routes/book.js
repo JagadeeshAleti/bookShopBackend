@@ -1,6 +1,7 @@
 const express = require('express')
 const Book = require('../models/book')
 const Ledger = require('../models/ledger')
+
 const router = express.Router()
 
 //Creating a book
@@ -18,7 +19,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const books = await Book.find({})
-        res.status(200).send(books)
+        res.send(books)
     } catch (error) {
         res.status(500).send(error)
     }
@@ -30,7 +31,7 @@ router.get('/:id', async (req, res) => {
     try {   
         const book = await Book.findById(_id)
         if (!book) {
-            res.status(404).send({error: 'There is no boook for this id'})
+            return res.status(404).send({error: 'There is no boook for this id'})
         }
         res.send(book)
     } catch (error) {
@@ -70,7 +71,7 @@ router.delete('/:id', async (req, res) => {
         const bookId = req.params.id
         const book =  await Book.findByIdAndDelete(bookId)
         if (!book) {
-            res.status(404).send({error: 'There is no boook for this id'})
+            return res.status(404).send({error: 'There is no boook for this id'})
         }
         res.send(book)
     } catch (error) {
@@ -78,7 +79,7 @@ router.delete('/:id', async (req, res) => {
     }
 }) 
 
-//Checkout a book
+//Checkout a book by id
 router.patch('/:bookId/checkout/:userId', async (req, res) => {
     const params = req.params
     const bookId = params.bookId
@@ -87,15 +88,13 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
     try {
         const book = await Book.findById(bookId)
         if (!book) {
-            res.status(404).send({message: "There is no book for this id"})
-            return
+            return res.status(404).send({message: "There is no book for this id"})
         }
         if (book.status !== "AVAILABLE") {
             const err = {
                 message: "Book is unavialble"
             }
-            res.status(400).send(err) 
-            return
+            return res.status(400).send(err) 
         } 
         book.status = "UNAVAILABLE"
         book.updatedBy = userId
@@ -105,7 +104,6 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
         ledger.status = "CHECKOUT"
         ledger.bookId = bookId
         ledger.userId = userId
-
         await ledger.save()
         
         const response = {
@@ -115,12 +113,12 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
         res.send(response)
     
     } catch (error) {
-        console.log(error)
         res.status(500).send(error)
     }
     
 })
 
+//return a book by id
 router.patch('/:bookId/return/:userId', async (req, res) => {
     const params = req.params
     const bookId = params.bookId
@@ -128,12 +126,10 @@ router.patch('/:bookId/return/:userId', async (req, res) => {
     try {
         const book = await Book.findById(bookId)
         if (!book) {
-            res.status(404).send({message: "There is no book for this id"})
-            return
+            return res.status(404).send({message: "There is no book for this id"})
         }
         if (book.status === "AVAILABLE") {
-            res.status(400).send({message: "At present no one has taken the book"})
-            return
+            return res.status(400).send({message: "At present no one has taken the book"})
         }
         book.status = "AVAILABLE"
         book.updatedBy = userId
@@ -151,10 +147,8 @@ router.patch('/:bookId/return/:userId', async (req, res) => {
         }
         res.send(response)
     } catch (error) {
-        console.log(error)
         res.status(500).send(error)
     }
 })
-
 
 module.exports = router

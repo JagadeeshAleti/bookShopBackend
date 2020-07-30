@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const bookRoute = require('./routes/book')
 const userRoute = require('./routes/user')
+const ledgerRoute = require('./routes/ledger')
 const dotenv = require('dotenv')
 
 const app = express()
@@ -26,5 +27,6 @@ db.once('open', () => console.log('Connected to the Databse'))
 
 app.use('/book', bookRoute)
 app.use('/user', userRoute)
+app.use('/ledger', ledgerRoute)
 
 app.listen(process.env.PORT || 9001)
