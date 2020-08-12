@@ -17,10 +17,14 @@ router.post('/', async (req, res) => {
 
 //Get all the books
 router.get('/', async (req, res) => {
+    const page = parseInt(req.query.page || '1');
+    const limit = parseInt(req.query.limit || '2');
     try {
-        const books = await Book.find({})
-        res.send(books)
+        const books = await Book.find().sort({ createdAt: 'desc' }).limit(limit).skip((page-1)*limit)
+        const count = await Book.countDocuments()
+        res.send({totlaCount: count,books:books})
     } catch (error) {
+        console.log(error)
         res.status(500).send(error)
     }
 })
