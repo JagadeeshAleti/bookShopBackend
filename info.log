@@ -1,0 +1,98 @@
+{"message":"Connected to the Databse","level":"info","timestamp":"2020-08-14T07:53:44.347Z"}
+{"message":"Connected to the Databse","level":"info","timestamp":"2020-08-14T07:54:03.029Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T07:55:38.938Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T07:56:11.109Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T07:59:33.917Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:00:10.145Z"}
+{"name":"Extraction","author":"Johny Deep","level":"info","message":"Adding a new book ","timestamp":"2020-08-14T08:00:58.829Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:01:48.792Z"}
+{"book":{"name":"Extraction","author":"Johny Deep"},"level":"info","message":"Adding a new book ","timestamp":"2020-08-14T08:01:55.442Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:02:46.507Z"}
+{"book":{"name":"Extraction","authr":"Johny Deep"},"level":"info","message":"Adding a new book ","timestamp":"2020-08-14T08:03:02.801Z"}
+{"error":{"errors":{"author":{"properties":{"message":"Path `author` is required.","type":"required","path":"author"},"kind":"required","path":"author"}},"_message":"Book validation failed","message":"Book validation failed: author: Path `author` is required."},"level":"error","message":"Failed to add book","timestamp":"2020-08-14T08:03:02.812Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:06:54.332Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:12:09.462Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:14:50.661Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:17:55.589Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:18:47.129Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:19:18.418Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:19:26.871Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:19:33.724Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:19:39.920Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:20:00.217Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:21:06.190Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:21:35.872Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:22:43.170Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:23:36.619Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:24:12.701Z"}
+{"message":"Server running on port undefined","level":"info","timestamp":"2020-08-14T08:28:18.446Z"}
+{"message":"Server running on port undefined","level":"error","timestamp":"2020-08-14T08:29:45.713Z"}
+{"message":"Server running on port undefined","level":"error","timestamp":"2020-08-14T08:30:31.995Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-14T08:31:11.219Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-14T08:33:29.353Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-14T08:34:09.395Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-14T08:36:36.196Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-14T08:37:22.714Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-14T08:41:42.195Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-15T04:39:45.641Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-15T04:40:53.381Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-15T04:40:55.500Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-15T04:41:42.247Z"}
+{"book":{"name":"Extraction","authr":"Johny Deep"},"level":"info","message":"Adding a new book ","timestamp":"2020-08-15T04:42:30.197Z"}
+{"error":{"errors":{"author":{"properties":{"message":"Path `author` is required.","type":"required","path":"author"},"kind":"required","path":"author"}},"_message":"Book validation failed","message":"Book validation failed: author: Path `author` is required."},"level":"error","message":"Failed to add book","timestamp":"2020-08-15T04:42:30.209Z"}
+{"message":"Server running on port 9001","level":"error","timestamp":"2020-08-15T04:46:16.644Z"}
+{"book":{"name":"Extraction","authr":"Johny Deep"},"level":"info","message":"Adding a new book ","timestamp":"2020-08-15T04:46:32.902Z"}
+{"error":{"errors":{"author":{"properties":{"message":"Path `author` is required.","type":"required","path":"author"},"kind":"required","path":"author"}},"_message":"Book validation failed","message":"Book validation failed: author: Path `author` is required."},"level":"error","message":"Failed to add book","timestamp":"2020-08-15T04:46:32.920Z"}
+{"book":{"name":"Extraction","author":"Johny Deep"},"level":"info","message":"Adding a new book ","timestamp":"2020-08-15T04:46:46.268Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:49:14.220Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:51:18.022Z"}
+{"book":{"name":"Pirates of the carebian","authr":"Johny Deep"},"level":"info","message":"Adding a new book ","timestamp":"2020-08-15T04:52:08.588Z"}
+{"error":{"errors":{"author":{"properties":{"message":"Path `author` is required.","type":"required","path":"author"},"kind":"required","path":"author"}},"_message":"Book validation failed","message":"Book validation failed: author: Path `author` is required."},"level":"error","message":"Failed to add book","timestamp":"2020-08-15T04:52:08.600Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-15T04:52:43.622Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:53:41.501Z"}
+{"books":{},"level":"info","message":"Fetching information of all books ","timestamp":"2020-08-15T04:53:44.957Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:54:47.374Z"}
+{"books":[{"status":"AVAILABLE","updatedBy":null,"createdAt":"2020-08-15T04:46:16.277Z","updatedAt":"2020-08-15T04:46:16.277Z","_id":"5f3768b62dfc270cf7642c89","name":"Extraction","author":"Johny Deep","__v":0},{"status":"AVAILABLE","updatedBy":null,"createdAt":"2020-08-14T08:01:48.652Z","updatedAt":"2020-08-14T08:01:48.652Z","_id":"5f3644f3cdac1d0faf469b9d","name":"Extraction","author":"Johny Deep","__v":0},{"status":"AVAILABLE","updatedBy":null,"createdAt":"2020-08-14T08:00:09.984Z","updatedAt":"2020-08-14T08:00:09.984Z","_id":"5f3644ba1896200f32f2415c","name":"Extraction","author":"Johny Deep","__v":0}],"level":"info","message":"Fetching information of all books ","timestamp":"2020-08-15T04:54:51.750Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:56:33.909Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-15T04:56:36.981Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:57:41.056Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:58:33.882Z"}
+{"level":"info","message":"Fetching in formation of book with id","timestamp":"2020-08-15T04:58:36.427Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T04:59:34.504Z"}
+{"message":"Fetching in formation of book with id","level":"info","timestamp":"2020-08-15T04:59:36.962Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:00:11.958Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:00:45.402Z"}
+{"message":"Failed to fetch book by id","level":"info","timestamp":"2020-08-15T05:00:51.454Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:01:44.961Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-15T05:02:01.738Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:02:56.973Z"}
+{"message":"Failed to update book by id","level":"info","timestamp":"2020-08-15T05:04:15.005Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:05:42.610Z"}
+{"message":"Failed to delete book by id","level":"error","timestamp":"2020-08-15T05:06:11.109Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-15T05:06:33.020Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-15T05:06:48.848Z"}
+{"message":"Deleting a book by id,,,,","level":"info","timestamp":"2020-08-15T05:07:19.534Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:07:53.034Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:08:04.896Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:08:14.599Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:08:19.004Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:09:00.668Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:10:04.126Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:10:51.437Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:11:37.175Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:12:06.686Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:13:31.622Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:13:50.723Z"}
+{"user":{"name":"Eswar","password":"eswar143"},"level":"info","message":"Adding a new user ","timestamp":"2020-08-15T05:14:05.736Z"}
+{"message":"Failed to add new user","level":"error","timestamp":"2020-08-15T05:14:05.753Z"}
+{"user":{"name":"Eswar","password":"eswar143@"},"level":"info","message":"Adding a new user ","timestamp":"2020-08-15T05:14:18.241Z"}
+{"message":"Failed to add new user","level":"error","timestamp":"2020-08-15T05:14:18.243Z"}
+{"user":{"name":"Eswar rao","password":"Eswar143@"},"level":"info","message":"Adding a new user ","timestamp":"2020-08-15T05:14:44.153Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:15:32.475Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:15:52.430Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:16:32.845Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:16:58.490Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:17:21.469Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:17:46.598Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:18:07.109Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-15T05:18:14.560Z"}

@@ -1,6 +1,7 @@
 const express = require('express')
 const Book = require('../models/book')
 const Ledger = require('../models/ledger')
+const logger = require('../config/logger')
 
 const router = express.Router()
 
@@ -8,9 +9,11 @@ const router = express.Router()
 router.post('/', async (req, res) => {
     const book = new Book(req.body)
     try {
+        logger.info('Adding a new book ', { book: req.body })
         await book.save()
         res.status(201).send(book)
     } catch (error) {
+        logger.error('Failed to add book', {error})
         res.status(500).send(error)
     }
 })
@@ -20,11 +23,12 @@ router.get('/', async (req, res) => {
     const page = parseInt(req.query.page || '1');
     const limit = parseInt(req.query.limit || '2');
     try {
+        logger.info("Fetching information of all books")
         const books = await Book.find().sort({ createdAt: 'desc' }).limit(limit).skip((page-1)*limit)
         const count = await Book.countDocuments()
         res.send({totlaCount: count,books:books})
     } catch (error) {
-        console.log(error)
+        logger.error("Failed to fetch information of all books")
         res.status(500).send(error)
     }
 })
@@ -37,8 +41,10 @@ router.get('/:id', async (req, res) => {
         if (!book) {
             return res.status(404).send({error: 'There is no boook for this id'})
         }
+        logger.info("Fetching information of book by id")
         res.send(book)
     } catch (error) {
+        logger.error("Failed to fetch book by id")
         res.status(500).send({error: 'Check the id of the book'})
     }
 })
@@ -62,8 +68,10 @@ router.patch('/:id', async (req, res) => {
         if (!book) {
             return res.status(404).send({error: 'There is no boook for this id'})
         }
+        logger.info("Updating book information,,,,,")
         res.send(book)
     } catch (error) {
+        logger.error("Failed to update book by id")
         res.status(500).send({error: 'Check the id of the book'})
     }
     
@@ -77,8 +85,10 @@ router.delete('/:id', async (req, res) => {
         if (!book) {
             return res.status(404).send({error: 'There is no boook for this id'})
         }
+        logger.info("Deleting a book by id,,,,")
         res.send(book)
     } catch (error) {
+        logger.error("Failed to delete book by id")
         res.status(500).send({error: 'Check the id of the book'})
     }
 }) 
@@ -114,9 +124,11 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
             book: book,
             ledger: ledger
         }
+        logger.info("Checkout a book by id")
         res.send(response)
     
     } catch (error) {
+        logger.error("Failed to checkout book by id")
         res.status(500).send(error)
     }
     
@@ -149,8 +161,10 @@ router.patch('/:bookId/return/:userId', async (req, res) => {
             book: book,
             ledger: ledger
         }
+        logger.info("Return a book by id")
         res.send(response)
     } catch (error) {
+        logger.error("Failed to return a book by id")
         res.status(500).send(error)
     }
 })
