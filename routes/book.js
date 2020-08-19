@@ -1,8 +1,9 @@
 const express = require('express')
+const jwt = require('jsonwebtoken')
 const Book = require('../models/book')
 const Ledger = require('../models/ledger')
 const logger = require('../config/logger')
-
+const { authinticateToken } = require('../helper/auth.helper')
 const router = express.Router()
 
 //Creating a book
@@ -19,10 +20,13 @@ router.post('/', async (req, res) => {
 })
 
 //Get all the books
-router.get('/', async (req, res) => {
-    const page = parseInt(req.query.page || '1');
-    const limit = parseInt(req.query.limit || '2');
+router.get('/', authinticateToken,async (req, res) => {
+
+    const query = req.query;
+    const page = parseInt(query.page || '1');
+    const limit = parseInt(query.limit || '2');
     try {
+        
         logger.info("Fetching information of all books")
         const books = await Book.find().sort({ createdAt: 'desc' }).limit(limit).skip((page-1)*limit)
         const count = await Book.countDocuments()
