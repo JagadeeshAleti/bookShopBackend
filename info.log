@@ -316,3 +316,100 @@
 {"message":"Server running on port 9001","level":"info","timestamp":"2020-08-19T07:32:44.438Z"}
 {"message":"Server running on port 9001","level":"info","timestamp":"2020-08-19T07:32:46.885Z"}
 {"message":"Fetching information of all books","level":"info","timestamp":"2020-08-19T07:32:50.541Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-19T07:34:24.561Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:20:56.925Z"}
+{"message":"logged in with userId: 5f1fa56e67bb930d0135a735","level":"info","timestamp":"2020-08-20T13:22:26.217Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:23:59.865Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:24:07.026Z"}
+{"message":"Failed to fetch information of all books","level":"error","timestamp":"2020-08-20T13:24:07.029Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:24:13.385Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:24:26.853Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:24:35.927Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:24:41.235Z"}
+{"message":"Fetching information of all users","level":"info","timestamp":"2020-08-20T13:25:15.993Z"}
+{"message":"Failed to fetch book by id","level":"error","timestamp":"2020-08-20T13:25:30.539Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:25:49.023Z"}
+{"message":"Fetching information of book by id","level":"info","timestamp":"2020-08-20T13:26:05.060Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:27:50.609Z"}
+{"message":"Fetching information of book by id","level":"info","timestamp":"2020-08-20T13:27:55.465Z"}
+{"message":"Fetching information of book by id","level":"info","timestamp":"2020-08-20T13:27:57.065Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:28:24.352Z"}
+{"message":"Fetching information of book by id","level":"info","timestamp":"2020-08-20T13:28:45.248Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:29:22.430Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:29:53.790Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:30:08.651Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:31:16.835Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:32:17.229Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:33:46.440Z"}
+{"message":"Fetching information of book by id","level":"info","timestamp":"2020-08-20T13:33:49.459Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:34:16.414Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:34:37.166Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:35:22.378Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:35:56.212Z"}
+{"message":"Updating book information,,,,,","level":"info","timestamp":"2020-08-20T13:36:00.249Z"}
+{"message":"Fetching information of book by id","level":"info","timestamp":"2020-08-20T13:36:19.452Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:36:57.429Z"}
+{"message":"Deleting a book by id,,,,","level":"info","timestamp":"2020-08-20T13:37:15.758Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T13:37:24.702Z"}
+{"message":"logged in with userId: 5f1fa56e67bb930d0135a735","level":"info","timestamp":"2020-08-20T13:40:48.436Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:43:08.128Z"}
+{"message":"Fetching user info by id","level":"info","timestamp":"2020-08-20T13:44:17.309Z"}
+{"message":"Fetching information of all users","level":"info","timestamp":"2020-08-20T13:44:40.380Z"}
+{"message":"Fetching user info by id","level":"info","timestamp":"2020-08-20T13:45:14.104Z"}
+{"message":"Updation user info by id","level":"info","timestamp":"2020-08-20T13:46:35.135Z"}
+{"message":"Fetching user info by id","level":"info","timestamp":"2020-08-20T13:46:45.872Z"}
+{"user":{"name":"abcd","password":"Abcs@"},"level":"info","message":"Adding a new user ","timestamp":"2020-08-20T13:47:33.754Z"}
+{"message":"Failed to add new user","level":"error","timestamp":"2020-08-20T13:47:33.765Z"}
+{"user":{"name":"abcd","password":"Abcs34345@"},"level":"info","message":"Adding a new user ","timestamp":"2020-08-20T13:47:44.004Z"}
+{"message":"Fetching information of all users","level":"info","timestamp":"2020-08-20T13:47:57.235Z"}
+{"message":"Deleting user by id","level":"info","timestamp":"2020-08-20T13:48:19.625Z"}
+{"message":"Fetching information of all users","level":"info","timestamp":"2020-08-20T13:48:57.025Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T13:49:22.759Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T13:50:20.170Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:51:59.440Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:55:38.782Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:57:16.259Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:57:25.384Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T13:58:20.687Z"}
+{"message":"logged in with userId: 5f1fa56e67bb930d0135a735","level":"info","timestamp":"2020-08-20T13:58:49.720Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:00:22.771Z"}
+{"message":"logged in with userId: 5f1fa56e67bb930d0135a735","level":"info","timestamp":"2020-08-20T14:00:26.134Z"}
+{"message":"logged in with userId: 5f1fa56e67bb930d0135a735","level":"info","timestamp":"2020-08-20T14:00:50.869Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:03:38.179Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:03:46.358Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:04:35.928Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:04:57.972Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:05:23.185Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:06:16.770Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:07:19.150Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:07:26.054Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:07:30.888Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:08:15.120Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:08:20.100Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:09:07.405Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:09:54.247Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:10:21.604Z"}
+{"message":"Fetching information of all books","level":"info","timestamp":"2020-08-20T14:10:37.141Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:11:20.295Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:11:22.460Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:12:10.284Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:12:12.683Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:12:14.600Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:12:14.904Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:12:15.133Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:12:21.848Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:12:46.676Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:13:58.488Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:14:01.132Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:14:06.378Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:14:31.957Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:14:45.418Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:14:51.456Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:15:24.394Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:17:16.544Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:17:25.671Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:17:38.638Z"}
+{"message":"Filter request made","level":"info","timestamp":"2020-08-20T14:18:12.610Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:19:45.422Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:20:18.404Z"}
+{"message":"Server running on port 9001","level":"info","timestamp":"2020-08-20T14:20:40.328Z"}

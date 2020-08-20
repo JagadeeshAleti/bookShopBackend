@@ -1,10 +1,10 @@
-const express = require('express')
+const router = require('express').Router()
 const jwt = require('jsonwebtoken')
 const Book = require('../models/book')
 const Ledger = require('../models/ledger')
 const logger = require('../config/logger')
 const { authinticateToken } = require('../helper/auth.helper')
-const router = express.Router()
+
 
 //Creating a book
 router.post('/', async (req, res) => {
@@ -38,7 +38,7 @@ router.get('/', authinticateToken,async (req, res) => {
 })
 
 //Get a book by id
-router.get('/:id', async (req, res) => {
+router.get('/:id', authinticateToken, async (req, res) => {
     const _id = req.params.id
     try {   
         const book = await Book.findById(_id)
@@ -54,9 +54,9 @@ router.get('/:id', async (req, res) => {
 })
 
 //Update a book by id
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', authinticateToken, async (req, res) => {
     const updates = Object.keys(req.body)
-    const allowedUpdates = ['name', 'author', 'status', 'updatedBy']
+    const allowedUpdates = ['name', 'author', 'status', 'updatedBy', 'updatedAt']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
     
     if (!isValidOperation) {
@@ -82,7 +82,7 @@ router.patch('/:id', async (req, res) => {
 })
 
 //Delete a book by id
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authinticateToken, async (req, res) => {
     try {
         const bookId = req.params.id
         const book =  await Book.findByIdAndDelete(bookId)
@@ -98,7 +98,7 @@ router.delete('/:id', async (req, res) => {
 }) 
 
 //Checkout a book by id
-router.patch('/:bookId/checkout/:userId', async (req, res) => {
+router.patch('/:bookId/checkout/:userId', authinticateToken, async (req, res) => {
     const params = req.params
     const bookId = params.bookId
     const userId = params.userId
@@ -139,7 +139,7 @@ router.patch('/:bookId/checkout/:userId', async (req, res) => {
 })
 
 //return a book by id
-router.patch('/:bookId/return/:userId', async (req, res) => {
+router.patch('/:bookId/return/:userId', authinticateToken, async (req, res) => {
     const params = req.params
     const bookId = params.bookId
     const userId = params.userId

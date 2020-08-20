@@ -1,11 +1,10 @@
-const express = require('express')
+const router = require('express').Router()
 const User = require('../models/user')
 const Ledger = require('../models/ledger')
 const user = require('../models/user')
 const logger = require('../config/logger')
+const { authinticateToken } = require('../helper/auth.helper')
 const { setMaxListeners } = require('../config/logger')
-
-const router = express.Router()
 
 //Creating a user
 router.post('/', async (req, res) => {
@@ -21,7 +20,7 @@ router.post('/', async (req, res) => {
 })
 
 //Get all users
-router.get('/', async (req, res) => {
+router.get('/', authinticateToken, async (req, res) => {
     try {
         const users = await User.find({})
         logger.info("Fetching information of all users")
@@ -33,7 +32,7 @@ router.get('/', async (req, res) => {
 })
 
 //Get a single user by id
-router.get('/:id', async (req, res) => {
+router.get('/:id', authinticateToken, async (req, res) => {
     const _id = req.params.id
     try {
         const user = await User.findById(_id)
@@ -49,7 +48,7 @@ router.get('/:id', async (req, res) => {
 })
 
 //Update a user by id
-router.patch('/:id', async (req, res) => {
+router.patch('/:id', authinticateToken, async (req, res) => {
     const updates = Object.keys(req.body)
     const allowedUpdates = ['name', 'password']
     const isValidOperation = updates.every((update) => allowedUpdates.includes(update))
@@ -76,7 +75,7 @@ router.patch('/:id', async (req, res) => {
 })
 
 //Delete a user by id 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authinticateToken, async (req, res) => {
     try {
         const user = await User.findByIdAndDelete(req.params.id)
         if (!user) {
