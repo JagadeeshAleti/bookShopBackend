@@ -19,7 +19,7 @@ const ledgerSchema = new mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    updatedAr: {
+    updatedAt: {
         type: Date,
         default: Date.now()
     }

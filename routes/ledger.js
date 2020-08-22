@@ -5,7 +5,6 @@ const logger = require('../config/logger')
 //Status info
 router.get('/filter', async (req, res) => {
     const query = req.query
-    const status = query.status
     const page = parseInt(query.page || '1')
     const limit = parseInt(query.limit || '3')
 
@@ -18,7 +17,6 @@ router.get('/filter', async (req, res) => {
         }
     })
 
-    console.log(queryObj)
     try { 
         logger.info("Filter request made")  
         const checkoutInfo = await Ledger.find(queryObj).limit(limit).skip((page-1)*limit)

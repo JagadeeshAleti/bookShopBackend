@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
             .has().uppercase()                              
             .has().lowercase()                              
             .has().digits()                                
-            .has().not().spaces()  
+            //.has().not().spaces()  
             
             if (!schema.validate(value)) {
                 throw new Error('Password must have 7 characters with lower,upper,digits except spaces')
